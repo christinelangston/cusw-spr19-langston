@@ -20,7 +20,7 @@ class Connection{
   strokeWeight(5); // 5 pixels wide line
   stroke(255, 100); //white but translucent 100/255
  line(x1, y1, x2, y2);
- 
+ fill(255);
  text(type, (x1+x2)/2, (y1+y2)/2);
  }
 }
