@@ -2,15 +2,18 @@ class Shape {
   
  PVector screenLocation;
  boolean locked;
+ String col;
  
- Shape(){
+ Shape(String colorString){
   screenLocation = new PVector(width/2, height/2);
   locked = false;
+  col = colorString;
+  print(col);
  }
 
 
 void randomLocation(){
-screenLocation = new PVector(random(width), random(height));
+screenLocation = new PVector(random(70, width), random(height));
 }
 
 
@@ -34,13 +37,23 @@ void updateLocation(){
  }
 
 void drawShape(){
- noStroke();
+ //noStroke();
+ if (col == "blue"){
  fill(#7AE0FF);
+ }if (col == "green"){
+   fill(#7EFF77); 
+}if(col == "red"){
+  fill(#E82C0C);
+}if(col == "yellow"){
+  fill(#FFEC1F);
+  }
  //text
  //ellipse(screenLocation.x, screenLocation.y, 30, 30);
   square(screenLocation.x, screenLocation.y, 30);
   
  //text("circle", screenLocation.x+ 30, screenLocation.y +30);
 }
+
+//int length()
 
 }
