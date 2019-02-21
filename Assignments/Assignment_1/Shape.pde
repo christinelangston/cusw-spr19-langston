@@ -13,7 +13,7 @@ class Shape {
 
 
 void randomLocation(){
-screenLocation = new PVector(random(70, width), random(height));
+screenLocation = new PVector(random(140, width - 20), random(height - 20));
 }
 
 

@@ -21,19 +21,10 @@ void setup(){
   greens = new Shape[10];
    yellows = new Shape[10];
    reds = new Shape[10];
- 
   buttons = new Button[4]; // so far only 2 buttons
  
   size(640, 360); // width then height
  background(255);
- // for (int i = 0; i < 10; i++){
- //    Shape s = new Shape("blue");
- //    s.randomLocation();
-     //shapes.add(s);
- //    shapes[i] = s;
-// }
-//  b = new Button("Add", 20, 310);
-//  redButton = new Button("Add", 20 , 270);
 
   buttons[0] = new Button("Add", 20, 310, "green");;
   buttons[1] = new Button("Add", 20 , 270, "red");
