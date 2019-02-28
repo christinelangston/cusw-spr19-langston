@@ -1,4 +1,4 @@
-// tab for all objects of POIs
+// make stations
 
 ArrayList<POI> pois;
 
@@ -18,14 +18,12 @@ class POI{
     lon = _lon;
     coord = new PVector(lat, lon);
     type = null;
- //   ATM = false;
   }
   
   void draw(){
       PVector screenLocation = map.getScreenLocation(coord);
     fill(station);
     noStroke();
- //   if (ATM) fill(atm);
     ellipse(screenLocation.x, screenLocation.y, 6, 6);
   }
   

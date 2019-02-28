@@ -1,3 +1,4 @@
+// object for bridges, based off of Way object
 ArrayList<Bridge>  bridges;
 
 class Bridge{

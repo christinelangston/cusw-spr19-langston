@@ -1,5 +1,5 @@
+/// object for rail ways
 ArrayList<Way> ways; 
-//ArrayList<Way>  bridges;
 
 class Way{
 ArrayList<PVector> coordinates;

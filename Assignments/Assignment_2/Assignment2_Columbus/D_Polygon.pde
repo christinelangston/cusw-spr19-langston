@@ -1,13 +1,13 @@
-ArrayList<Polygon> polygons;
+// object for buildings
 
+ArrayList<Polygon> polygons;
 
 class Polygon{
   PShape p; // visual representation of polygon
   ArrayList<PVector> coordinates;
   
   Polygon(){
-   coordinates  = new ArrayList<PVector>();
-   
+   coordinates  = new ArrayList<PVector>();   
   }
   
   Polygon(ArrayList<PVector> coords){

@@ -36,7 +36,7 @@ void setup(){
 
 void draw(){
    
-  
+  // zooming ability
   if(zoom == 1){
       image(zoom_1, 0, 0); 
   }else if(zoom ==2){
@@ -80,8 +80,8 @@ void draw(){
   
 }
 
-void keyPressed(){
- if(key == 'b' || key == 'B'){
+void keyPressed(){ // determine what to draw
+ if(key == 'b' || key == 'B'){ // activate buildings
   if(!drawBuildings){
  drawBuildings = true; 
 }else{
@@ -89,14 +89,14 @@ void keyPressed(){
   
 }}
 
-if(key == 'r' || key == 'R'){
+if(key == 'r' || key == 'R'){ //activate roads and bridges
   if(!drawRail){
  drawRail = true; 
 }else{
  drawRail = false; 
   
 }}
-if(key == 's' || key == 'S'){
+if(key == 's' || key == 'S'){ //activate stations
   if(!drawStations){
  drawStations = true; 
 }else{

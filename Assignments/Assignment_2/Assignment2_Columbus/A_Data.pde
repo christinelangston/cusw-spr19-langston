@@ -51,20 +51,17 @@ void parseData(){
   // Identity 2 properties: geometry and type
   String type = features.getJSONObject(i).getJSONObject("geometry").getString("type"); // point, line, polygon 
   JSONObject geometry = features.getJSONObject(i).getJSONObject("geometry");
-//  JSONObject properties = features.getJSONObject(i).getJSONObject("properties");
-  //makePOIs
+ 
+   //makePOIs
   if(type.equals("Point")){
    //create poi
    float lat = geometry.getJSONArray("coordinates").getFloat(1);
-   float lon = geometry.getJSONArray("coordinates").getFloat(0); // note lon then lat
-   
+   float lon = geometry.getJSONArray("coordinates").getFloat(0); // note lon then lat  
    POI poi = new POI(lat, lon);
-//   poi.type = amenity;
-//   if(amenity.equals("atm")) poi.ATM = true;
    pois.add(poi);
   }
   }
-  
+  //parse rail
   for(int i=0; i < features_rail.size(); i++){
   // Identity 2 properties: geometry and type
   String type = features_rail.getJSONObject(i).getJSONObject("geometry").getString("type"); // point, line, polygon 
@@ -84,11 +81,9 @@ void parseData(){
    }
    Way way = new Way(coords);
    ways.add(way);
-   
-  }
-  }
+ } }
   
-  
+  //parse bridges
   for(int i=0; i < features_bridge.size(); i++){
   // Identity 2 properties: geometry and type
   String type = features_bridge.getJSONObject(i).getJSONObject("geometry").getString("type"); // point, line, polygon 
@@ -96,7 +91,6 @@ void parseData(){
   // make lines / roads /ways
   if(type.equals("LineString")){
    ArrayList<PVector> coords = new ArrayList<PVector>(); 
-   // dont need last nest
    JSONArray coordinates = geometry.getJSONArray("coordinates");//.getJSONArray(0);
    for(int j=0; j<coordinates.size(); j++){
     float lat = coordinates.getJSONArray(j).getFloat(1);
@@ -110,12 +104,11 @@ void parseData(){
   }
   }
  
- 
+ //parse buildings
  for(int i=0; i < features_build.size(); i++){
   // Identity 2 properties: geometry and type
   String type = features_build.getJSONObject(i).getJSONObject("geometry").getString("type"); // point, line, polygon 
   JSONObject geometry = features_build.getJSONObject(i).getJSONObject("geometry");
-
   // make polygons! 
   if(type.equals("Polygon")){
    //make a polygon!
@@ -132,7 +125,4 @@ void parseData(){
    Polygon poly = new Polygon(coords);
    polygons.add(poly);
    
-  }
-  
-  }
-}
+  }  }}
