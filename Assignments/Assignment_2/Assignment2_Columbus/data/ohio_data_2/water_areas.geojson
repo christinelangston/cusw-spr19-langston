@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "water_areas",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "osm_id": 361455962, "amenity": "fountain", "landuse": "basin" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -83.0023223, 39.9596712 ], [ -83.002206, 39.9596842 ], [ -83.002142, 39.9593465 ], [ -83.0022583, 39.9593336 ], [ -83.0023223, 39.9596712 ] ] ] } },
+{ "type": "Feature", "properties": { "osm_id": 361455981, "amenity": "fountain", "landuse": "basin" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -83.0026089, 39.9611668 ], [ -83.002496, 39.9611798 ], [ -83.002444, 39.960915 ], [ -83.0025569, 39.960902 ], [ -83.0026089, 39.9611668 ] ] ] } }
+]
+}
