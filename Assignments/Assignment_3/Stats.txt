@@ -1,0 +1,21 @@
+Christine Langston 
+March 7, 2019
+
+What case study area did you pick and why?
+I chose Columbus Ohio again this time because I'm doing UROP work on transportation for that area and thought it would be cool to learn more about the area! 
+
+
+What metrics did you pick and why?
+I chose to look into the total number of workers and the proportion that uses different modes of transportation. This means I used three metrics: 1) Workers over 16 years old, 2) Workers over 16 years old who use car, van, truck, and then 3) Workers who use public transit. I also added transit points from Open Street Map to get a sense of where transit access is in the city. 
+
+What statistical test did you use and why?
+
+I used an R^2 test to understand the correlation between two variables for a bivariate regression. I compared Median income of the Census Block Group with the percentage of workers in the block group that use a car, van or truck to get to work. I wanted to see if there is a correlation with income and the mode of transportation, like for example in high income areas people use cars more than in low income areas. 
+
+What was it's result (again not graded for accuracy)?
+Not correlated because the R^2 value was 0.0054. Therefore we cannot conclude any relationship between Income and Percentage of car users.
+
+//B08301e1 = total workers over 16 
+//B08301e2 = # workers who use car, truck, van
+//B08301e10 = # workers who use public transit
+//B19013e1 = median income
